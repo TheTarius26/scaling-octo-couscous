@@ -1,6 +1,6 @@
-import 'package:clean_arch_flutter_template/config/color/colors.dart';
-import 'package:clean_arch_flutter_template/config/font/fonts.dart';
 import 'package:flutter/material.dart';
+import 'package:scaling_octo_couscous/config/color/colors.dart';
+import 'package:scaling_octo_couscous/config/font/fonts.dart';
 
 class AppTheme {
   static ThemeData get lightTheme => ThemeData(

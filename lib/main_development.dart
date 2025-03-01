@@ -1,4 +1,4 @@
-import 'package:clean_arch_flutter_template/bootstrap.dart';
+import 'package:scaling_octo_couscous/bootstrap.dart';
 
 void main() {
   bootstrap();
