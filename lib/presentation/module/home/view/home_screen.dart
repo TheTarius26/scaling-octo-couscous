@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<HomeBloc>(),
+      create: (context) => getIt<HomeBloc>()..add(const HomeInitial()),
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Home'),

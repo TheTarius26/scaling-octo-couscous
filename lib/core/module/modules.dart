@@ -11,7 +11,7 @@ abstract class ThirdPartyModule {
   }
 
   Dio mainDioClient() {
-    final baseUrl = getEnv()['BASE_URL']!;
+    const baseUrl = 'https://669dce1a9a1bda36800467a2.mockapi.io/api/v1';
 
     final dio = Dio(
       BaseOptions(

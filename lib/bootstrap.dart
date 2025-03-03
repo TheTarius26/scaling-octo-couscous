@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:scaling_octo_couscous/config/app/app.dart';
 import 'package:scaling_octo_couscous/core/injector/injector.dart';
+import 'package:scaling_octo_couscous/core/local/hive_init.dart';
 import 'package:scaling_octo_couscous/core/resource/app_error.dart';
 
 class AppBlocObserver extends BlocObserver {
@@ -28,9 +29,11 @@ class AppBlocObserver extends BlocObserver {
   }
 }
 
-void bootstrap() {
+Future<void> bootstrap() async {
   WidgetsFlutterBinding.ensureInitialized();
   configureDepedencies();
+  WidgetsFlutterBinding.ensureInitialized();
+  await initHive();
   FlutterError.onError = (FlutterErrorDetails details) {};
   Bloc.observer = AppBlocObserver();
 

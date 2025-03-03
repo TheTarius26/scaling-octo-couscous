@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import 'package:injectable/injectable.dart';
 import 'package:scaling_octo_couscous/core/resource/app_error.dart';
 import 'package:scaling_octo_couscous/core/resource/bloc_status.dart';
 import 'package:scaling_octo_couscous/domain/entity/product/product.dart';
@@ -10,6 +11,7 @@ import 'package:scaling_octo_couscous/domain/usecase/product/get_product_by_id_u
 part 'detail_product_event.dart';
 part 'detail_product_state.dart';
 
+@injectable
 class DetailProductBloc extends Bloc<DetailProductEvent, DetailProductState> {
   DetailProductBloc(
     this._getProductByIdUsecase,

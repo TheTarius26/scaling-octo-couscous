@@ -21,6 +21,7 @@ Product _$ProductFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Product {
   String get name => throw _privateConstructorUsedError;
+  @JsonKey(name: 'PhotoUrl')
   String get photoUrl => throw _privateConstructorUsedError;
   DateTime get createdAt => throw _privateConstructorUsedError;
   String get id => throw _privateConstructorUsedError;
@@ -39,7 +40,11 @@ abstract class $ProductCopyWith<$Res> {
   factory $ProductCopyWith(Product value, $Res Function(Product) then) =
       _$ProductCopyWithImpl<$Res, Product>;
   @useResult
-  $Res call({String name, String photoUrl, DateTime createdAt, String id});
+  $Res call(
+      {String name,
+      @JsonKey(name: 'PhotoUrl') String photoUrl,
+      DateTime createdAt,
+      String id});
 }
 
 /// @nodoc
@@ -90,7 +95,11 @@ abstract class _$$ProductImplCopyWith<$Res> implements $ProductCopyWith<$Res> {
       __$$ProductImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, String photoUrl, DateTime createdAt, String id});
+  $Res call(
+      {String name,
+      @JsonKey(name: 'PhotoUrl') String photoUrl,
+      DateTime createdAt,
+      String id});
 }
 
 /// @nodoc
@@ -137,7 +146,7 @@ class __$$ProductImplCopyWithImpl<$Res>
 class _$ProductImpl implements _Product {
   const _$ProductImpl(
       {required this.name,
-      required this.photoUrl,
+      @JsonKey(name: 'PhotoUrl') required this.photoUrl,
       required this.createdAt,
       required this.id});
 
@@ -147,6 +156,7 @@ class _$ProductImpl implements _Product {
   @override
   final String name;
   @override
+  @JsonKey(name: 'PhotoUrl')
   final String photoUrl;
   @override
   final DateTime createdAt;
@@ -194,7 +204,7 @@ class _$ProductImpl implements _Product {
 abstract class _Product implements Product {
   const factory _Product(
       {required final String name,
-      required final String photoUrl,
+      @JsonKey(name: 'PhotoUrl') required final String photoUrl,
       required final DateTime createdAt,
       required final String id}) = _$ProductImpl;
 
@@ -203,6 +213,7 @@ abstract class _Product implements Product {
   @override
   String get name;
   @override
+  @JsonKey(name: 'PhotoUrl')
   String get photoUrl;
   @override
   DateTime get createdAt;

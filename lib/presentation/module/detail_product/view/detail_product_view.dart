@@ -57,7 +57,6 @@ class DetailProductView extends StatelessWidget {
         );
       case BlocStatus.loaded:
         _buildProductDetail(context, state.product!);
-        break;
     }
     return const SizedBox.shrink();
   }
